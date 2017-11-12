@@ -10,4 +10,44 @@ import UIKit
 
 class AddNoteViewController: UIViewController {
     
+    // MARK: IBOutlets
+    
+    @IBOutlet weak var newNoteTextField: UITextField!
+    
+    // MARK: - IBActions
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        
+        guard
+            let note = self.newNoteTextField.text else {
+                print("Missing details.")
+                return
+        }
+        
+        let newNote = Note(context: CoreData.context)
+        
+        newNote.details = note
+        
+        self.saveContext()
+        
+    self.navigationController?.popViewController(animated: true)
+    }
+    
+    // MARK: - View Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Add Note"
+    }
+    
+    // MARK: Convenience Methods
+    
+    private func saveContext() {
+        
+        do {
+            try CoreData.context.save()
+        } catch let error {
+            print("Error while saving new note: \(error.localizedDescription)")
+        }
+    }
 }

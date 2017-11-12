@@ -60,15 +60,16 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tableView" destination="6xN-Do-Mhu" id="hj2-Ey-LYc"/>
                         <segue destination="PrY-am-n3q" kind="show" identifier="addNoteSegue" id="2Ty-Qc-9fJ"/>
-                        <segue destination="Zvh-4b-NWM" kind="show" identifier="NoteDetailViewController" id="uXY-V7-Tqk"/>
+                        <segue destination="Zvh-4b-NWM" kind="show" identifier="noteDetailSegue" id="uXY-V7-Tqk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-729" y="134"/>
         </scene>
-        <!--Title-->
+        <!--Note Detail View Controller-->
         <scene sceneID="aJI-xr-gs6">
             <objects>
                 <viewController id="Zvh-4b-NWM" customClass="NoteDetailViewController" customModule="Notes" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,7 +80,6 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EWu-Ij-AZQ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -93,9 +93,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="91H-qE-MrF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="C5h-fc-lnM">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Dr2-fs-Cm0"/>
+                    <navigationItem key="navigationItem" id="C5h-fc-lnM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Dr2-fs-Cm0">
+                            <connections>
+                                <action selector="editButtonPushed:" destination="Zvh-4b-NWM" id="1re-TU-3A8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="editButton" destination="Dr2-fs-Cm0" id="6h9-JG-67f"/>
+                        <outlet property="noteDetailTextView" destination="EWu-Ij-AZQ" id="CtI-tm-KLO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYk-QV-oBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,8 +134,15 @@
                         <viewLayoutGuide key="safeArea" id="Ugx-0e-fVA"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="a1o-JH-yDq">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Oqs-2u-I7f"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Oqs-2u-I7f">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="PrY-am-n3q" id="BCG-AI-gt7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="newNoteTextField" destination="lUc-5A-3AI" id="8nM-ez-Zko"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aq7-B2-2SH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

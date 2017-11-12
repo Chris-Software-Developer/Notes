@@ -16,6 +16,8 @@
 		0D927E9C1FB8E43D003869FC /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D927E9B1FB8E43D003869FC /* CoreData.swift */; };
 		0D927E9E1FB8E885003869FC /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D927E9D1FB8E885003869FC /* AddNoteViewController.swift */; };
 		0D927EA01FB8E9B4003869FC /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D927E9F1FB8E9B4003869FC /* NoteDetailViewController.swift */; };
+		0D927EA31FB8EEE3003869FC /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D927EA11FB8EEE3003869FC /* Note+CoreDataClass.swift */; };
+		0D927EA41FB8EEE3003869FC /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D927EA21FB8EEE3003869FC /* Note+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		0D927E9B1FB8E43D003869FC /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		0D927E9D1FB8E885003869FC /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 		0D927E9F1FB8E9B4003869FC /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
+		0D927EA11FB8EEE3003869FC /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0D927EA21FB8EEE3003869FC /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 		0D927E9A1FB8E3EA003869FC /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				0D927EA11FB8EEE3003869FC /* Note+CoreDataClass.swift */,
+				0D927EA21FB8EEE3003869FC /* Note+CoreDataProperties.swift */,
 				0D927E891FB8E3AF003869FC /* Notes.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -181,6 +187,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D927E9E1FB8E885003869FC /* AddNoteViewController.swift in Sources */,
+				0D927EA41FB8EEE3003869FC /* Note+CoreDataProperties.swift in Sources */,
+				0D927EA31FB8EEE3003869FC /* Note+CoreDataClass.swift in Sources */,
 				0D927E9C1FB8E43D003869FC /* CoreData.swift in Sources */,
 				0D927E851FB8E3AF003869FC /* ViewController.swift in Sources */,
 				0D927E8B1FB8E3AF003869FC /* Notes.xcdatamodeld in Sources */,
