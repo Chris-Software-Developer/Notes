@@ -13,13 +13,12 @@ class CoreData {
     
     // MARK: - Core Data stack
     
+    // Prevents initializing this CoreData instance outside of this class.
     private init() {}
     
-    static var context: NSManagedObjectContext {
-        return persistentContainer.viewContext
-    }
+    static let context = CoreData.persistentContainer.viewContext
     
-    static var persistentContainer: NSPersistentContainer = {
+    static var persistentContainer: NSPersistentContainer {
         
         let container = NSPersistentContainer(name: "Notes")
         
@@ -29,16 +28,15 @@ class CoreData {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
+        
         return container
-    }()
+    }
     
     // MARK: - Core Data Saving support
     
-    static func saveContext () {
+    static func saveContext() {
         
-        let context = persistentContainer.viewContext
-        
-        if context.hasChanges {
+        if self.context.hasChanges {
             do {
                 try context.save()
             } catch {

@@ -60,7 +60,7 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Convenience Methods
-    
+
     private func fetchNotes() {
         
         let fetchRequest: NSFetchRequest<Note> = Note.fetchRequest()

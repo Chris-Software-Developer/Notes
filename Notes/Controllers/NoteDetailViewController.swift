@@ -73,7 +73,4 @@ class NoteDetailViewController: UIViewController, UITextViewDelegate {
             print("Error while saving new note: \(error.localizedDescription)")
         }
     }
-    
-    // func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
-    // }
 }
