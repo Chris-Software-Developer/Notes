@@ -10,16 +10,16 @@ import UIKit
 
 class AddNoteViewController: UIViewController {
     
-    // MARK: IBOutlets
+    // MARK: - IBOutlets
     
-    @IBOutlet weak var newNoteTextField: UITextField!
+    @IBOutlet weak var newNoteTextView: UITextView!
     
     // MARK: - IBActions
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         
         guard
-            let note = self.newNoteTextField.text else {
+            let note = self.newNoteTextView.text else {
                 print("Missing details.")
                 return
         }
@@ -37,10 +37,10 @@ class AddNoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Add Note"
+        self.title = "New Note"
     }
     
-    // MARK: Convenience Methods
+    // MARK: - Convenience Methods
     
     private func saveContext() {
         

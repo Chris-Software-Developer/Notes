@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "noteDetailViewController" {
+        if segue.identifier == "noteDetailSegue" {
             
             guard let note = self.noteForSegue else {
                 print("Could not get note.")

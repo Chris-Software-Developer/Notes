@@ -94,14 +94,14 @@
                         <viewLayoutGuide key="safeArea" id="91H-qE-MrF"/>
                     </view>
                     <navigationItem key="navigationItem" id="C5h-fc-lnM">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Dr2-fs-Cm0">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Dr2-fs-Cm0">
                             <connections>
-                                <action selector="editButtonPushed:" destination="Zvh-4b-NWM" id="1re-TU-3A8"/>
+                                <action selector="doneButtonPushed:" destination="Zvh-4b-NWM" id="BCG-cm-Fbg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="editButton" destination="Dr2-fs-Cm0" id="6h9-JG-67f"/>
+                        <outlet property="doneButton" destination="Dr2-fs-Cm0" id="kCv-gh-rkQ"/>
                         <outlet property="noteDetailTextView" destination="EWu-Ij-AZQ" id="CtI-tm-KLO"/>
                     </connections>
                 </viewController>
@@ -123,13 +123,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e13-B0-bPB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="e13-B0-bPB" firstAttribute="top" secondItem="Ugx-0e-fVA" secondAttribute="top" id="ABP-qj-4Uf"/>
                             <constraint firstItem="lUc-5A-3AI" firstAttribute="leading" secondItem="Ugx-0e-fVA" secondAttribute="leading" id="B3G-Ih-YGb"/>
+                            <constraint firstItem="Ugx-0e-fVA" firstAttribute="trailing" secondItem="e13-B0-bPB" secondAttribute="trailing" id="Cc3-gG-MZb"/>
                             <constraint firstItem="lUc-5A-3AI" firstAttribute="top" secondItem="Ugx-0e-fVA" secondAttribute="top" id="Ps8-6w-bHX"/>
                             <constraint firstItem="Ugx-0e-fVA" firstAttribute="bottom" secondItem="lUc-5A-3AI" secondAttribute="bottom" id="ld3-kq-jCI"/>
                             <constraint firstItem="Ugx-0e-fVA" firstAttribute="trailing" secondItem="lUc-5A-3AI" secondAttribute="trailing" id="nDM-VW-qvg"/>
+                            <constraint firstItem="e13-B0-bPB" firstAttribute="leading" secondItem="Ugx-0e-fVA" secondAttribute="leading" id="viJ-Ii-iEY"/>
+                            <constraint firstItem="Ugx-0e-fVA" firstAttribute="bottom" secondItem="e13-B0-bPB" secondAttribute="bottom" id="yfz-Gj-Kjw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ugx-0e-fVA"/>
                     </view>
@@ -141,7 +151,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="newNoteTextField" destination="lUc-5A-3AI" id="8nM-ez-Zko"/>
+                        <outlet property="newNoteTextView" destination="e13-B0-bPB" id="TbC-rO-8AZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aq7-B2-2SH" userLabel="First Responder" sceneMemberID="firstResponder"/>
